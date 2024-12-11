@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="styles/comunidade.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Feedback</title>
+</head>
+<body>
+
+<div class="container">
+    <div class="head"><h1>O que achou da nossa apresentação?</h1></div>
+    <div><span id="comment">Sem </span> comentários</div>
+    <div class="text"><p>O que você achou da nossa empresa?</p></div>
+    <div class="comments"></div>
+    <div class="commentbox">
+        <img src="images/user.jpg" alt="">
+        <div class="content">
+            <h2>Comentar como:</h2>
+            <input type="text" value="Anônimo" class="user">
+
+            <div class="commentinput">
+                <input type="text" placeholder="Escreva uma resposta" class="usercomment">
+                <div class="buttons">
+                    <button type="submit" disabled id="publish">Enviar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    "use strict"
+
+    const userId = {
+        name: null,
+        identity: null,
+        image: null,
+        message: null,
+        date: null
+    };
+
+    const userComment = document.querySelector(".usercomment");
+    const publishBtn = document.querySelector("#publish");
+    const comments = document.querySelector(".comments");
+    const userName = document.querySelector(".user");
+
+    // Função para ativar/desativar o botão de envio
+    userComment.addEventListener("input", e => {
+        if (!userComment.value) {
+            publishBtn.setAttribute("disabled", "disabled");
+            publishBtn.classList.remove("abled");
+        } else {
+            publishBtn.removeAttribute("disabled");
+            publishBtn.classList.add("abled");
+        }
+    });
+
+    // Função para adicionar um novo comentário
+    function addPost() {
+        console.log("The button works!");
+
+        if (!userComment.value) return;
+
+        userId.name = userName.value || "Anônimo";
+        userId.image = userId.name === "Anônimo" ? "images/user.jpg" : "images/user.jpg"; // O caminho está correto
+        userId.message = userComment.value;
+        userId.date = new Date().toLocaleString();
+
+        let newComment = {
+            name: userId.name,
+            image: userId.image,
+            message: userId.message,
+            date: userId.date
+        };
+
+        // Adiciona o comentário ao HTML
+        comments.innerHTML += `
+            <div class="parents">
+                <img src="${newComment.image}">
+                <div>
+                    <h1>${newComment.name}</h1>
+                    <p>${newComment.message}</p>
+                    <div class="engagements">
+                        <span class="date">${comment.date}</span>
+                        <i class="fa-regular fa-heart"></i>
+                    </div>
+                </div>
+            </div>
+        `;
+
+        // Salva o comentário no localStorage
+        let savedComments = JSON.parse(localStorage.getItem("comments")) || [];
+        savedComments.push(newComment);
+        localStorage.setItem("comments", JSON.stringify(savedComments));
+
+        // Limpa o campo de entrada e atualiza o contador
+        userComment.value = "";
+        document.getElementById("comment").textContent = savedComments.length;
+    }
+
+    // Função para carregar comentários ao abrir a página
+    function loadComments() {
+        const savedComments = JSON.parse(localStorage.getItem("comments")) || [];
+        savedComments.forEach(comment => {
+            comments.innerHTML += `
+                <div class="parents">
+                    <img src="${comment.image}">
+                    <div>
+                        <h1>${comment.name}</h1>
+                        <p>${comment.message}</p>
+                        <div class="engagements">
+                            <span class="date">${comment.date}</span>
+                            <i class="fa-regular fa-heart"></i>
+                        </div>
+                    </div>
+                </div>
+            `;
+        });
+
+        // Atualiza o contador de comentários
+        document.getElementById("comment").textContent = savedComments.length;
+    }
+
+    // Evento para carregar comentários salvos ao abrir a página
+    document.addEventListener("DOMContentLoaded", loadComments);
+
+    // Adiciona o evento de clique no botão
+    publishBtn.addEventListener("click", addPost);
+
+    document.addEventListener("DOMContentLoaded", () => {
+    // Seleciona todos os ícones de like
+    const likeIcons = document.querySelectorAll(".engagements i");
+
+    // Adiciona o evento de clique para alternar a classe "active"
+    likeIcons.forEach(icon => {
+        icon.addEventListener("click", () => {
+            // Alterna entre o ícone de coração vazio e cheio
+            if (icon.classList.contains("fa-regular")) {
+                icon.classList.remove("fa-regular", "fa-heart");
+                icon.classList.add("fa-solid", "fa-heart"); // Ícone cheio
+                icon.classList.add("active"); // Adiciona a classe active
+            } else {
+                icon.classList.remove("fa-solid", "fa-heart");
+                icon.classList.add("fa-regular", "fa-heart"); // Ícone vazio
+                icon.classList.remove("active"); // Remove a classe active
+            }
+        });
+    });
+});
+
+</script>
+
+</body>
+</html>

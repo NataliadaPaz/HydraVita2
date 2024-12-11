@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="logoicon.ico" type="image/x-icon">
+    <title>Hydravita</title>
+    <!-- style css link -->
+    <link rel="stylesheet" href="styles/social.css">
+    <!-- fontawesome css link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+
+<!-- header section start -->
+
+
+<header>
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="logoBox">
+                <img src="images/logoicon.ico" alt="logo">
+            </div>
+            <div class="searchBox">
+                <input type="search">
+                <i class="fas fa-search"></i>
+            </div>
+            <div class="iconBox1">
+                <i class="fa-solid fa-house"></i>
+                <i class="fa-solid fa-user-group"></i>
+                <i class="fa-solid fa-video"></i>
+            </div>
+            <div class="iconBox2">
+                <div class="iconBox2">
+                    <i class="fa-solid fa-bell"></i>
+                    <label id="userImageLabel"><img src="images/user.jpg" alt="user" id="userImage"></label>
+                </div>
+
+                <nav class="navigation">
+                    <button class="btnLogin-popup">Login</button>
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!--Seção de grupos-->
+<div class="grupos">
+
+</div>
+<div class="wrapper">
+        <span class="icon-close">
+            <ion-icon name="close"></ion-icon>
+        </span>
+
+    <div class="form-box login">
+        <h2>Login</h2>
+        <form action="#">
+            <div class="input-box">
+                    <span class="icon"><ion-icon name="mail">
+                        </ion-icon>
+                    </span>
+                <input type="email" required>
+                <label>Email</label>
+            </div>
+            <div class="input-box">
+                    <span class="icon">
+                        <ion-icon name="lock-closed"></ion-icon>
+                    </span>
+                <input type="password" required>
+                <label>Password</label>
+            </div>
+            <div class="remember-forgot">
+                <label><input type="checkbox">Remember me</label>
+                <a href="#">Esqueceu a senha?</a>
+            </div>
+            <button type="submit" class="btn">Login</button>
+            <div class="login-register">
+                <p>Não tem uma Conta? <a href="#" class="register-link">Registrar</a>
+                </p>
+            </div>
+        </form>
+    </div>
+
+    <div class="form-box register">
+        <h2>Registrar</h2>
+        <form action="#">
+            <div class="input-box">
+                    <span class="icon">
+                        <ion-icon name="person"></ion-icon>
+                    </span>
+                <input type="text" required>
+                <label>Username</label>
+            </div>
+            <div class="input-box">
+                    <span class="icon"><ion-icon name="mail">
+                        </ion-icon>
+                    </span>
+                <input type="email" required>
+                <label>Email</label>
+            </div>
+            <div class="input-box">
+                    <span class="icon">
+                        <ion-icon name="lock-closed"></ion-icon>
+                    </span>
+                <input type="password" required>
+                <label>Password</label>
+            </div>
+            <div class="remember-forgot">
+                <label><input type="checkbox">Eu concordo com os termos e condições</label>
+            </div>
+            <button type="submit" class="btn">Registrar</button>
+            <div class="login-register">
+                <p>Já tem uma Conta? <a href="#" class="login-link">Login</a> </p>
+            </div>
+        </form>
+    </div>
+</div>
+<!-- header section end -->
+<!-- home section start -->
+
+
+<div class="home">
+    <div class="container">
+        <div class="home-weapper">
+
+            <!-- home left start here -->
+            <div class="home-left">
+
+                <div class="profile">
+                    <img id="userImage" src="images/user.jpg" alt="user">
+                    <h3 id="username"></h3>
+                </div>
+
+                <div class="group">
+                    <h4 class="mini-headign">Grupos</h4>
+                    <p>Você ainda não participa de nenhum grupo</p>
+                    <!--<label>
+                        <img src="images/gg.png" alt="group01">
+                        <span>Graphic design</span>
+                    </label>
+
+                    <label>
+                        <img src="images/gg2.png" alt="group02">
+                        <span>website design</span>
+                    </label>
+
+                    <label>
+                        <img src="images/gg3.png" alt="group03">
+                        <span>ZED.zahidul</span>
+                    </label>  -->
+
+                    <button class="see-more-btn">Veja mais <i class="fa-solid fa-angle-down"></i></button>
+                </div>
+
+                <div class="explore">
+                    <h4 class="mini-headign">Explore</h4>
+
+                    <a href="#group"><i class="fa-solid fa-user-group"></i> Grupos</a>
+                    <a href="#fav"><i class="fa-solid fa-star"></i></i> Favoritos</a>
+                    <a href="#salve"><i class="fa-solid fa-bookmark"></i></i> Salvos</a>
+                    <a href="#event"><i class="fa-solid fa-clock"></i> Eventos</a>
+                    <div><label class="darkTheme"> <span></span></label> Modo escuro</div>
+
+                    <button class="see-more-btn">Veja mais <i class="fa-solid fa-angle-down"></i></button>
+                </div>
+
+            </div><!-- home left end here -->
+
+            <!-- home center start here -->
+
+            <div class="home-center">
+                <div class="home-center-wrapper">
+                    <!-- Criar nova postagem -->
+                    <div class="createPost">
+                        <h3 class="mini-headign">Nova Publicação</h3>
+                        <div class="post-text">
+                            <img id="user-image" src="images/user.jpg" alt="user">
+                            <input type="text-area" id="post-input" placeholder="">
+                        </div>
+
+                        <div class="post-icon">
+                            <a href="#" style="background: #ffebed;" onclick="document.getElementById('fileInput').click();">
+                                <i style="background: #ff4154;" class="fa-solid fa-camera"></i> Foto
+                            </a>
+                            <input type="file" id="fileInput" accept="image/*" style="display: none;">
+                            <a href="#" style="background: #d7ffef;" onclick="document.getElementById('videoInput').click();">
+                                <i style="background: #00d181;" class="fa-solid fa-video"></i> Vídeo
+                            </a>
+                            <input type="file" id="videoInput" accept="video/mp4,video/webm,video/ogg" style="display: none;">
+
+                            <a href="#" style="background: #fff4d1;">
+                                <i style="background: #ffca28;" class="fa-solid fa-face-grin-beam"></i> Emojis
+                            </a>
+
+                            <a href="#" style="background: #ccdcff;" onclick="document.getElementById('docInput').click();">
+                                <i style="background: #0053ff;" class="fa-solid fa-file"></i> Docs
+                            </a>
+                            <input type="file" id="docInput" accept=".pdf,.doc,.docx,.pptx,.txt" style="display: none;">
+                            <a href="#" style="background: #ccdcff;" class="buttons" id="submit-link">
+                                <button type="submit" disabled id="publish">
+                                    <i style="background: #0053ff;" class="fa-solid fa-paper-plane"></i>
+                                </button>
+                                Enviar
+                            </a>
+                        </div>
+                    </div>
+
+
+                    <div class="hv-post1">
+                        <div class="hv-post1-container">
+                            <div class="hv-post1-header">
+                                <ul>
+                                    <li class="active">Populares</li>
+                                    <li>Recentes</li>
+                                </ul>
+                            </div>
+                            <div class="hv-p1-main">
+                                <div class="post-title">
+                                    <img src="images/naty.jpg" alt="user picture">
+                                    <ul>
+                                        <li><h3>Natália <span> . 4 days ago</span></h3></li>
+                                        <li><span>07 december at 12:25 PM</span></li>
+                                    </ul>
+                                    <p>Acabei de ver uma imagem sobre microplásticos e fiquei chocada! 😱 Como algo tão pequeno consegue causar tanto dano? Precisamos agir agora antes que seja tarde demais! 🌍💔 #Microplásticos #MundoSemPlástico
+                                    </p>
+                                </div>
+
+                                <div class="post-images">
+                                    <div class="post-images1">
+                                        <img src="images/microplasticos.png" alt="post images 01">
+                                        <img src="images/agua.png" alt="post images 02">
+                                        <img src="images/pedra.jpg" alt="post images 03">
+                                    </div>
+                                    <div class="post-images2">
+                                        <img src="images/saude.png" alt="post images 04">
+                                    </div>
+                                </div>
+
+                                <div class="like-comment">
+                                    <ul>
+                                        <li><i class="fa-regular fa-heart"></i><span>Curtidas</span></li>
+                                        <li><i class="fa-regular fa-comment" ></i> <span> Comentários</span></li>
+                                        <li><i class="fa-solid fa-share-nodes"></i> <span>Compartilhar</span></li>
+                                    </ul>
+                                </div>
+                                <!-- Área de comentários -->
+                                <div class="comments-container" id="comments-container" style="display: none;">
+                                    <div class="comment-box">
+                                        <input type="text" id="comment-input" placeholder="Escreva um comentário...">
+                                        <button onclick="addComment()">Enviar</button>
+                                    </div>
+
+                                    <div class="comments-list" id="comments-list"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- home center end -->
+
+            <div class="home-right">
+                <div class="home-right-wrapper">
+
+                    <div class="event-friend">
+                        <div class="event">
+                            <h3 class="heading">Próximos eventos <span>Veja mais</span></h3>
+                            <img src="images/mte.jpg" alt="event-img">
+                            <div class="event-date">
+                                <h3>11 <b>Dez</b></h3>
+                                <h4>Apresentação MTE <span>Ferraz de Vasconcelos</span></h4>
+                            </div>
+                            <button><i class="fa-regular fa-star"></i> Salvar</button>
+                            <img src="images/Sao-Paulo-Brasil.jpg" alt="event-img">
+                            <div class="event-date">
+                                <h3>25-27 <b>Jun</b></h3>
+                                <h4>IFAT Brasil <span>São Paulo Expo</span></h4>
+                            </div>
+                            <button><i class="fa-regular fa-star"></i> Salvar</button>
+                        </div>
+
+
+                        <hr>
+
+                        <div class="friend">
+                            <h3 class="heading">Amigos recomendados <span>Veja mais</span></h3>
+                            <ul>
+                                <li><img src="images/marta.png" alt="user"></li>
+                                <li>
+                                    <b>Marta Helena</b>
+                                    <p>Lorem ipsum dolor sit amet.</p>
+                                    <button>Adicionar</button><button class="friend-remove">Remover</button>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+
+                    <div class="create-page">
+                        <ul>
+                            <li>
+                                <i class="fa-solid fa-circle-plus"></i>
+                                <h4>Criar Grupos</h4>
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </li>
+                            <li>
+                                <img src="images/logob.png" alt="groups">
+                            </li>
+                            <li>
+                                <b>Hydravita <span>3 Membros</span></b>
+                                <button>Entrar no grupo</button>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="messenger">
+                        <div class="messenger-search">
+                            <i class="fa-solid fa-user-group"></i>
+                            <h4>Chat</h4>
+                            <input type="search" placeholder="Search">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </div>
+                        <ul>
+                            <li>
+                                <img src="images/logo.png" alt="user">
+                                <b>HydraVita <span>Online</span></b>
+                                <i class="fa-brands fa-facebook-messenger"></i>
+                            </li>
+
+                            <li>
+                                <img src="images/marta.png" alt="user">
+                                <b>Marta <span>Offline</span></b>
+                                <i class="fa-brands fa-facebook-messenger"></i>
+                            </li>
+
+                            <li>
+                                <img src="images/naty.jpg" alt="user">
+                                <b>Natália <span>Online</span></b>
+                                <i class="fa-brands fa-facebook-messenger"></i>
+                            </li>
+                        </ul>
+                    </div>
+                </div><!-- home right wrapper end -->
+            </div><!-- home right end -->
+        </div>
+    </div>
+</div>
+
+
+    <script src="js/social.js"></script>
+<script>
+    var darkButton = document.querySelector(".darkTheme");
+
+    darkButton.onclick = function(){
+        darkButton.classList.toggle("button-Active");
+        document.body.classList.toggle("dark-color")
+    }
+
+
+    "use strict"
+
+    const userId = {
+        name: null,
+        identity: null,
+        image: null,
+        message: null,
+        date: null
+    };
+
+    const userComment = document.querySelector(".usercomment");
+    const postInput = document.getElementById("post-input");
+    const publishBtn = document.querySelector("#publish");
+    const comments = document.querySelector(".comments");
+    const userName = document.querySelector(".user");
+
+    postInput.addEventListener("input", e => {
+    if (!postInput.value.trim()) {  // Verifica se o campo está vazio ou apenas com espaços
+        publishBtn.setAttribute("disabled", "disabled");
+        publishBtn.classList.remove("abled");
+    } else {
+        publishBtn.removeAttribute("disabled");
+        publishBtn.classList.add("abled");
+    }
+});
+
+    // Função para ativar/desativar o botão de envio comentário
+    userComment.addEventListener("input", e => {
+        if (!userComment.value) {
+            publishBtn.setAttribute("disabled", "disabled");
+            publishBtn.classList.remove("abled");
+        } else {
+            publishBtn.removeAttribute("disabled");
+            publishBtn.classList.add("abled");
+        }
+    });
+
+
+    // Função para adicionar um novo comentário
+    function addPost() {
+        console.log("The button works!");
+
+        if (!userComment.value) return;
+
+        userId.name = userName.value || "Anônimo";
+        userId.image = userId.name === "Anônimo" ? "images/user.jpg" : "images/user.jpg"; // O caminho está correto
+        userId.message = userComment.value;
+        userId.date = new Date().toLocaleString();
+
+        let newComment = {
+            name: userId.name,
+            image: userId.image,
+            message: userId.message,
+            date: userId.date
+        };
+
+        // Adiciona o comentário ao HTML
+        comments.innerHTML += `
+            <div class="parents">
+                <img src="${newComment.image}">
+                <div>
+                    <h1>${newComment.name}</h1>
+                    <p>${newComment.message}</p>
+                    <div class="engagements">
+                        <span class="date">${comment.date}</span>
+                        <i class="fa-regular fa-heart"></i>
+                    </div>
+                </div>
+            </div>
+        `;
+
+        // Salva o comentário no localStorage
+        let savedComments = JSON.parse(localStorage.getItem("comments")) || [];
+        savedComments.push(newComment);
+        localStorage.setItem("comments", JSON.stringify(savedComments));
+
+        // Limpa o campo de entrada e atualiza o contador
+        userComment.value = "";
+        document.getElementById("comment").textContent = savedComments.length;
+    }
+
+    // Função para carregar comentários ao abrir a página
+    function loadComments() {
+        const savedComments = JSON.parse(localStorage.getItem("comments")) || [];
+        savedComments.forEach(comment => {
+            comments.innerHTML += `
+                <div class="parents">
+                    <img src="${comment.image}">
+                    <div>
+                        <h1>${comment.name}</h1>
+                        <p>${comment.message}</p>
+                        <div class="engagements">
+                            <span class="date">${comment.date}</span>
+                            <i class="fa-regular fa-heart"></i>
+                        </div>
+                    </div>
+                </div>
+            `;
+        });
+
+        // Atualiza o contador de comentários
+        document.getElementById("comment").textContent = savedComments.length;
+    }
+
+    // Evento para carregar comentários salvos ao abrir a página
+    document.addEventListener("DOMContentLoaded", loadComments);
+
+    function toggleComments() {
+    const commentsContainer = document.getElementById('comments-container');
+    if (commentsContainer.style.display === 'none') {
+        commentsContainer.style.display = 'block';
+    } else {
+        commentsContainer.style.display = 'none';
+    }
+}
+
+    // Adiciona o evento de clique no botão
+    publishBtn.addEventListener("click", addPost);
+
+    document.addEventListener("DOMContentLoaded", () => {
+    // Seleciona todos os ícones de like
+    const likeIcons = document.querySelectorAll(".engagements i");
+
+    // Adiciona o evento de clique para alternar a classe "active"
+    likeIcons.forEach(icon => {
+        icon.addEventListener("click", () => {
+            // Alterna entre o ícone de coração vazio e cheio
+            if (icon.classList.contains("fa-regular")) {
+                icon.classList.remove("fa-regular", "fa-heart");
+                icon.classList.add("fa-solid", "fa-heart"); // Ícone cheio
+                icon.classList.add("active"); // Adiciona a classe active
+            } else {
+                icon.classList.remove("fa-solid", "fa-heart");
+                icon.classList.add("fa-regular", "fa-heart"); // Ícone vazio
+                icon.classList.remove("active"); // Remove a classe active
+            }
+        });
+    });
+});
+
+</script>
+
+
+</body>
+</html>
